@@ -21,7 +21,7 @@ public class Page3Activity extends AppCompatActivity {
 
 //    @Override
 //    public void finish() {
-//        Intent intent = new Intent(); //此處不是從哪跳到哪的觀念
+//        Intent intent = new Intent(); //此處不是從哪跳到哪的觀念,跳的那種是啟動用的
 //        intent.putExtra("sound",soundSwitch.isChecked());
 ////        setResult(123);
 //        setResult(123,intent);
@@ -29,9 +29,9 @@ public class Page3Activity extends AppCompatActivity {
 //    }
 
     public void gotoMain(View view) {
-        Intent intent = new Intent(); //此處不是從哪跳到哪的觀念
+        Intent intent = new Intent(); //此處不是從哪跳到哪的觀念,跳的那種是啟動用的,此處只是要帶參數
         intent.putExtra("sound",soundSwitch.isChecked());
-        setResult(123,intent);
+        setResult(123,intent);  //把此intent帶出去(此intent在上行帶了資料
         finish();
     }
 }

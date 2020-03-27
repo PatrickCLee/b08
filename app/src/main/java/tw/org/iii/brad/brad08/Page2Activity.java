@@ -21,14 +21,14 @@ public class Page2Activity extends AppCompatActivity {
         Log.v("brad", "a = " + mainApp.a);
         Log.v("brad", "b = " + mainApp.b);
 
-        mainApp.a = 100;
-        mainApp.b = "OK2";
+        mainApp.a = 99;
+        mainApp.b = "xOKx";
 
         tv = findViewById(R.id.page2_tv);
 
-        Intent intent = getIntent();
+        Intent intent = getIntent();        //此處intent是Main的gotoPage2裡面的,故不用new
         String name = intent.getStringExtra("name");
-        int lottery = intent.getIntExtra("lottery",000);//第二參數為找不到第一參數時的預設值(物件型別的預設為null,基本型別可設定)
+        int lottery = intent.getIntExtra("lottery",000);//第二參數為找不到第一參數時的預設值(物件型別的預設為null(如上行),基本型別可指定同此處為000)
         tv.setText(name + ":" + lottery);
     }
 
@@ -36,4 +36,5 @@ public class Page2Activity extends AppCompatActivity {
         Intent intent = new Intent(this,MainActivity.class);
         startActivity(intent);
     }
+
 }
